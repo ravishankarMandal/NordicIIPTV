@@ -138,7 +138,7 @@ export default function FrameAnimation({ trackRef, zoom = 1, debug = false, onRa
       {debug && (
         <div
           ref={hudRef}
-          className="fixed bottom-3 left-3 z-[60] rounded bg-black/80 px-2.5 py-1 font-mono text-xs text-white"
+          className="fixed bottom-3 left-3 z-60 rounded bg-black/80 px-2.5 py-1 font-mono text-xs text-white"
         />
       )}
     </>

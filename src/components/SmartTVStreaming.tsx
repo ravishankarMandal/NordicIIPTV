@@ -22,13 +22,13 @@ const cards: StreamingCard[] = [
 
 function Card({ card }: { card: StreamingCard }) {
   return (
-    <article className="group relative h-[188px] w-[130px] shrink-0 overflow-hidden rounded-lg bg-slate-900 shadow-sm transition-all duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:shadow-[0_14px_25px_rgba(15,23,42,0.22)] sm:h-[230px] sm:w-[158px] lg:h-[260px] lg:w-[178px]">
+    <article className="group relative h-47 w-32.5 shrink-0 overflow-hidden rounded-lg bg-slate-900 shadow-sm transition-all duration-300 ease-out hover:z-10 hover:scale-[1.03] hover:shadow-[0_14px_25px_rgba(15,23,42,0.22)] sm:h-[230px] sm:w-[158px] lg:h-[260px] lg:w-[178px]">
       <img
         src={card.image}
         alt=""
         className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent px-3 pb-3 pt-10 text-white">
+      <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-slate-950/90 via-slate-950/25 to-transparent px-3 pb-3 pt-10 text-white">
         <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-white/70">{card.category}</p>
         <h3 className="mt-0.5 text-sm font-semibold">{card.title}</h3>
       </div>
@@ -140,7 +140,7 @@ export default function SmartTVStreaming() {
       aria-labelledby="smart-tv-streaming-heading"
       className="overflow-hidden bg-[#f8f8f7] py-20 text-[#172238] sm:py-24 lg:py-28"
     >
-      <div ref={contentRef} className="mx-auto max-w-2xl px-5 text-center sm:px-8">
+      <div ref={contentRef} className="mx-auto max-w-2xl px-5 text-center sm:px-8 ">
         <p className="flex items-center justify-center gap-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-accent">
           <span className="h-px w-5 bg-accent" aria-hidden="true" />
           Smart entertainment
@@ -156,16 +156,16 @@ export default function SmartTVStreaming() {
 
       <div
         ref={rowRef}
-        className="mt-12 overflow-hidden"
+        className="mt-12 mr-35 ml-35 overflow-hidden"
         onMouseEnter={pauseLoop}
         onMouseLeave={resumeLoop}
       >
         {reducedMotion ? (
-          <div className="mx-auto grid max-w-5xl grid-cols-2 justify-items-center gap-3 px-5 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:grid-cols-6">
+          <div className="mx-auto grid max-w-5xl grid-cols-2  justify-items-center gap-3 px-5 sm:grid-cols-3 sm:gap-4 sm:px-8 lg:grid-cols-6">
             {cards.map((card) => <Card key={card.id} card={card} />)}
           </div>
         ) : (
-          <div ref={trackRef} className="flex w-max gap-3 pl-3 sm:gap-4 sm:pl-4">
+          <div ref={trackRef} className="flex h-100 items-center w-max gap-3 pl-3 sm:gap-4 sm:pl-4">
             <div ref={groupRef} className="flex gap-3 sm:gap-4">
               {cards.map((card) => <Card key={card.id} card={card} />)}
             </div>

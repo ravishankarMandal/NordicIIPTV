@@ -83,7 +83,7 @@ export default function EntertainmentExperience() {
             <img
               src="/images/girlimage.webp"
               alt="Woman enjoying entertainment on a tablet in a cosy living room"
-              className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
+              className="aspect-4/3 w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
             />
           </div>
         </div>
